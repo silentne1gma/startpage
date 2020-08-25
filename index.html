@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="settings">
+            <img src="img/settings.svg" alt="" onclick="editCategories()">
+        </div>
+        <div class="wrapper" id="wrapper">
+            <div class="clock">
+                <h1>
+                    <div id="hours">welcome back</div>
+                    <div id="minutes"></div>
+                    <div id="seconds"></div>
+                </h1>
+            </div>
+            <div class="categories animate__animated animate__backInLeft">
+                <div class="settings category-settings">
+                    <!--<img src="img/edit.svg" alt="" onclick="editCategories()">-->
+                </div>
+                <div class="category-wrapper">
+                    <div class="category">
+                        <ul id="cat1">
+
+                        </ul>
+                        <div class="edit">
+                            <div class="add button" onclick="showAddPanel('cat1')
+                            ">
+                                <img src="img/plus.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <ul id="cat2">
+
+                        </ul>
+                        <div class="edit">
+                            <div class="add button" onclick="showAddPanel('cat2')">
+                                <img src="img/plus.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <ul id="cat3">
+
+                        </ul>
+                        <div class="edit">
+
+                            <div class="add button" onclick="showAddPanel('cat3')">
+                                <img src="img/plus.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <ul id="cat4">
+
+                        </ul>
+                        <div class="edit">
+                            <div class="add button" onclick="showAddPanel('cat4')">
+                                <img src="img/plus.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="ninja" id="ninja">
+        <div class="panel addPanel" id="addPanel">
+            <div class="addForm">
+                <input type="text" id="addSiteNameInput" placeholder="Name">
+                <input type="text" id="siteUrlInput" placeholder="URL">
+                <input type="text" id="siteHotkeyInput" placeholder="Hotkey">
+            </div>
+            <div class="actionForm">
+                <div class="save" onclick="addSite()">
+                    <h1>save</h1>
+                </div>
+                <div class="cancel" onclick="hidePanels()">
+                    <h1>cancel</h1>
+                </div>
+            </div>
+        </div>
+        <div class="panel removePanel" id="removePanel">
+            <div class="addForm">
+                <input type="text" id="RemoveSiteNameInput" placeholder="Name">
+            </div>
+            <div class="actionForm">
+                <div class="save" onclick="removeSite()">
+                    <h1>save</h1>
+                </div>
+                <div class="cancel" onclick="hidePanels()">
+                    <h1>cancel</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/clock.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hotkeys.js"></script>
+</body>
+
+</html>
